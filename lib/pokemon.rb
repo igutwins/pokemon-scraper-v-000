@@ -26,7 +26,12 @@ def self.save
   SQL
 @db.execute(sql, self.name, self.type)
 end
-  #create
-  #remove
+
+def self.delete
+  sql = <<-SQL
+    DROP TABLE pokemon
+  SQL
+@db.execute(sql)
+end
 
 end
