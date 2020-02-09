@@ -20,6 +20,12 @@ def self.create
 end
 
 def self.save
+  sql = <<-SQL
+    INSERT INTO pokemon (name, type)
+    VALUES (?, ?)
+  SQL
+
+end
   #create
   #remove
 
