@@ -24,7 +24,7 @@ def self.save
     INSERT INTO pokemon (name, type)
     VALUES (?, ?)
   SQL
-
+@db.execute(sql, self.name, self.type)
 end
   #create
   #remove
