@@ -38,9 +38,9 @@ end
 def self.find(id) #finds a pokemon from the database by their id number and returns a new Pokemon object (FAILED - 1)
   sql = <<-SQL
       SELECT * FROM pokemon
-      WHERE id == id
+      WHERE id = id
   SQL
-@db.execute(sql)
+  new_poke = @db.execute(sql)
   Pokemon.new(name, type)
 end
 
