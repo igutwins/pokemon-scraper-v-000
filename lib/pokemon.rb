@@ -25,7 +25,7 @@ def self.save(name, type, db)
     VALUES (?, ?)
   SQL
 db.execute(sql, name, type)
-@id = @db.execute("SELECT last_insert_rowid() FROM pokemon")[0][0]
+@id = db.execute("SELECT last_insert_rowid() FROM pokemon")[0][0]
 end
 
 def self.delete
