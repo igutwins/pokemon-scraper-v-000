@@ -35,7 +35,7 @@ def self.delete
 @db.execute(sql)
 end
 
-def self.find(id) #finds a pokemon from the database by their id number and returns a new Pokemon object (FAILED - 1)
+def self.find(id, db) #finds a pokemon from the database by their id number and returns a new Pokemon object (FAILED - 1)
   sql = <<-SQL
       SELECT * FROM pokemon
       WHERE id = id
