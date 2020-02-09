@@ -24,7 +24,7 @@ def self.save(name, id, db)
     INSERT INTO pokemon (name, type)
     VALUES (?, ?)
   SQL
-@db.execute(sql, self.name, self.type)
+@db.execute(sql, name, type)
 @id = @db.execute("SELECT last_insert_rowid() FROM pokemon")[0][0]
 end
 
