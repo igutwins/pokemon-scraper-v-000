@@ -14,7 +14,7 @@ def self.create
       id INTEGER PRIMARY KEY,
       name TEXT,
       type TEXT
-    );
+    )
   SQL
 @db.execute(sql)
 end
