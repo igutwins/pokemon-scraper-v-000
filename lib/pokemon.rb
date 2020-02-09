@@ -40,7 +40,7 @@ def self.find(id, db) #finds a pokemon from the database by their id number and 
       SELECT * FROM pokemon
       WHERE id = id
   SQL
-  new_poke = @db.execute(sql)
+  new_poke = db.execute(sql)
   id = new_poke[0]
   name = new_poke[1]
   type = new_poke[2]
