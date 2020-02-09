@@ -41,7 +41,11 @@ def self.find(id, db) #finds a pokemon from the database by their id number and 
       WHERE id = id
   SQL
   row = db.execute(sql)
-  new_poke = self.new(id:row[0], name:row[1], type:row[2], db:)
+  id = row[0]
+  name = row[1]
+  type = row[2]
+  new_poke = self.new(id:, name:, type:, db:)
+  new_poke
 end
 
 end
