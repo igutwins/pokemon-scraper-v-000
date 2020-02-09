@@ -19,7 +19,7 @@ def self.create
 @db.execute(sql)
 end
 
-def self.save(name, id, db)
+def self.save(name, type, db)
   sql = <<-SQL
     INSERT INTO pokemon (name, type)
     VALUES (?, ?)
