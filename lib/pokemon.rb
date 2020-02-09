@@ -28,13 +28,20 @@ db.execute(sql, name, type)
 @id = db.execute("SELECT last_insert_rowid() FROM pokemon")[0][0]
 end
 
-binding.pry
-
 def self.delete
   sql = <<-SQL
     DROP TABLE pokemon
   SQL
 @db.execute(sql)
+end
+
+def self.find(id) #finds a pokemon from the database by their id number and returns a new Pokemon object (FAILED - 1)
+  sql = <<-SQL
+      SELECT * FROM pokemon
+      WHERE id == id
+  SQL
+@db.execute(sql)
+  Pokemon.new(name, type)
 end
 
 end
